@@ -1,0 +1,24 @@
+<div class="utility_bar">
+  <div class="utility_bar_contain">
+    <div class="search_contain">
+      <input class="search_bar" type="search" ng-model="search" placeholder="Instant Customer Search..." />
+    </div>
+    <div class="new_customer_contain">
+      <input class="submitNew" type="submit" value="Add New Customer" />
+    </div>
+  </div>
+</div>
+<div class="list_contain">
+  <client-add></client-add>
+  <ul>
+    <li ng-repeat="client in clientList.clients | filter:search">
+      <p><strong>Name:</strong> <a ui-sref="clientDetails({ clientId: client._id })">{{client.firstName + "&nbsp;" + client.lastName}}</a></p>
+      <p><strong>Email:</strong> {{client.email}}</p>
+      <p><strong>Phone:</strong> {{client.phone}}</p>
+      <p><strong>Address:</strong> {{client.streetAddress + client.streetAddress2}} <span>{{client.city + ',' + "&nbsp;" + client.state + "&nbsp;" + client.zip}}</span></p>
+      <remove-client client="client"></remove-client>
+      <a ui-sref="clientDetails({ clientId: client._id })" class="button edit_details">Edit Details</a>
+      <hr />
+    </li>
+  </ul>
+</div>

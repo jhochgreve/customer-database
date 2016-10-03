@@ -1,0 +1,14 @@
+header{
+  background-color: $primary-color;
+  background-image: linear-gradient(to bottom, #134A9C 0%, #E8F0FC 50%, #E8F0FC 50%, #134A9C 100%);
+  padding: rem(5) 0 rem(5) 0;
+  border-bottom: 1px solid #0d3672;
+  .headline_contain{
+    @include outer-container;
+    text-align: center;
+    h1 a{
+      color: $headline-color;
+      text-decoration: none;
+    }
+  }
+}

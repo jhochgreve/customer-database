@@ -1,0 +1,64 @@
+@import "grid_settings";
+@import "normalize";
+@import "variables";
+body{
+  font-family: $primary-font-family;
+  font-size: $primary-font-size;
+}
+label{
+  display: block;
+}
+hr{
+  margin: rem(20) rem(0);
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-family: $headline-font-family;
+  font-size: $headline-font-size;
+  font-weight: $headline-font-weight;
+  text-transform: uppercase;
+}
+
+//form styles
+.input_contain{
+  @include span-columns(12);
+  padding: rem(20) 0 0 0;
+  input, select{
+    @include fill-parent;
+    line-height: rem(40);
+    border: 1px solid #ccc;
+    border-radius: none;
+  }
+  select{
+    -webkit-appearance: menulist-button;
+    -webkit-border-radius: 0px;
+    height: rem(44);
+    background: #fff;
+  }
+  label{
+    margin-bottom: rem(5);
+  }
+  span{
+    color: red;
+  }
+  @include media($md-768){
+    @include span-columns(6);
+    @include omega(2n);
+  }
+}
+.submit_contain{
+  @include span-columns(12);
+  padding: rem(20) rem(20) rem(20) 0;
+}
+
+//main button styles
+input[type="submit"], .button{
+  background-color: $button-background-color;
+  border: $button-border;
+  padding: rem(10) rem(25) rem(10) rem(25);
+  color: #000;
+  text-decoration: none;
+}

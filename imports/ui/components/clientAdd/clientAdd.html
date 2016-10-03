@@ -1,0 +1,111 @@
+<form class="clientAdd" name="newPerson" novalidate ng-submit="newPerson.$valid && clientAdd.submit()">
+	<div class="input_contain">
+		<label>
+			First Name *: <span ng-show="newPerson.first.$touched && newPerson.first.$invalid">First Name is required.</span>
+		</label>
+		<input type="text" name="first" ng-model="clientAdd.client.firstName" required/>
+	</div>
+	<div class="input_contain">
+		<label>
+	    Last Name *: <span ng-show="newPerson.last.$touched && newPerson.last.$invalid">Last Name is required.</span>
+	  </label>
+	  <input type="text" name="last" ng-model="clientAdd.client.lastName" required/>
+	</div>
+	<div class="input_contain">
+		<label>
+	    Email *: <span ng-show="newPerson.emailer.$touched && newPerson.emailer.$invalid">Email is required.</span>
+	  </label>
+	  <input type="email" name="emailer" ng-model="clientAdd.client.email" required/>
+	</div>
+	<div class="input_contain">
+		<label>
+			Phone:
+		</label>
+		<input type="tel" ng-model="clientAdd.client.phone"/>
+	</div>
+	<div class="input_contain">
+		<label>
+	    Street Address:
+	  </label>
+	  <input type="text" ng-model="clientAdd.client.streetAddress"/>
+	</div>
+	<div class="input_contain">
+		<label>
+	    Street Address 2:
+	  </label>
+	  <input type="text" ng-model="clientAdd.client.streetAddress2"/>
+	</div>
+	<div class="input_contain">
+		<label>
+			City:
+		</label>
+		<input type="text" ng-model="clientAdd.client.city"/>
+	</div>
+	<div class="input_contain">
+		<label>
+			State:
+		</label>
+		<select ng-model="clientAdd.client.state">
+		<option value="AL">Alabama</option>
+		<option value="AK">Alaska</option>
+		<option value="AZ">Arizona</option>
+		<option value="AR">Arkansas</option>
+		<option value="CA">California</option>
+		<option value="CO">Colorado</option>
+		<option value="CT">Connecticut</option>
+		<option value="DE">Delaware</option>
+		<option value="DC">District Of Columbia</option>
+		<option value="FL">Florida</option>
+		<option value="GA">Georgia</option>
+		<option value="HI">Hawaii</option>
+		<option value="ID">Idaho</option>
+		<option value="IL">Illinois</option>
+		<option value="IN">Indiana</option>
+		<option value="IA">Iowa</option>
+		<option value="KS">Kansas</option>
+		<option value="KY">Kentucky</option>
+		<option value="LA">Louisiana</option>
+		<option value="ME">Maine</option>
+		<option value="MD">Maryland</option>
+		<option value="MA">Massachusetts</option>
+		<option value="MI">Michigan</option>
+		<option value="MN">Minnesota</option>
+		<option value="MS">Mississippi</option>
+		<option value="MO">Missouri</option>
+		<option value="MT">Montana</option>
+		<option value="NE">Nebraska</option>
+		<option value="NV">Nevada</option>
+		<option value="NH">New Hampshire</option>
+		<option value="NJ">New Jersey</option>
+		<option value="NM">New Mexico</option>
+		<option value="NY">New York</option>
+		<option value="NC">North Carolina</option>
+		<option value="ND">North Dakota</option>
+		<option value="OH">Ohio</option>
+		<option value="OK">Oklahoma</option>
+		<option value="OR">Oregon</option>
+		<option value="PA">Pennsylvania</option>
+		<option value="RI">Rhode Island</option>
+		<option value="SC">South Carolina</option>
+		<option value="SD">South Dakota</option>
+		<option value="TN">Tennessee</option>
+		<option value="TX">Texas</option>
+		<option value="UT">Utah</option>
+		<option value="VT">Vermont</option>
+		<option value="VA">Virginia</option>
+		<option value="WA">Washington</option>
+		<option value="WV">West Virginia</option>
+		<option value="WI">Wisconsin</option>
+		<option value="WY">Wyoming</option>
+	</select>
+	</div>
+	<div class="input_contain">
+		<label>
+			Zipcode
+		</label>
+		<input type="text" ng-model="clientAdd.client.zip"/>
+	</div>
+	<div class="submit_contain">
+		<input class="customerSubmit" type="submit" value="Submit Customer">
+	</div>
+</form>

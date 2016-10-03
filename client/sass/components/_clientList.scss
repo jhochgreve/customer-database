@@ -1,0 +1,50 @@
+.utility_bar{
+  background-color: $third-color;
+  border-bottom: 1px solid $grey;
+  padding: rem(15) 0 rem(15) 0;
+  .utility_bar_contain{
+    @include outer-container;
+    .search_contain{
+      @include span-columns(12);
+      padding: 0 rem(20);
+      @include media($md-768){
+        @include span-columns(8);
+        padding: 0;
+      }
+      .search_bar{
+        @include span-columns(10 of 12);
+        line-height: rem(44);
+        border: 1px solid $secondary-color;
+        padding-left: rem(15);
+      }
+    }
+    .new_customer_contain{
+      @include span-columns(12);
+      padding: 0 rem(20);
+      @include media($md-768){
+        @include span-columns(3);
+        @include shift(1);
+        padding: 0;
+      }
+      .submitNew{
+        margin-top: rem(20);
+        @include media($md-768){
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+.list_contain{
+  @include outer-container;
+  padding: 0 rem(20);
+  @include media($md-768){
+    padding: 0;
+  }
+  ul{
+    list-style: none;
+  }
+  .edit_details{
+    margin-left: rem(15);
+  }
+}
